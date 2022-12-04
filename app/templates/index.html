@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Judul Halaman -->
+    <title>Project Akhir ASIMO 4</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+    crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href={{ url_for('static', filename='/css/style.css') }} type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-none">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+           <img src={{ url_for('static', filename='/images/logo.svg') }} alt=" " 
+				width="70" height="70" align="left">  
+            </a>
+            <div class="hamburger" data-toggle="collapse" data-target="#openNavbar" aria-controls="openNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="openNavbar">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#jurusan">Jurusan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#universitas">Universitas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href={{ url_for ('rekomendasi') }}>Rekomendasi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#profile">Profile Team</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </nav>
+      <!-- End Menu -->
+
+     <!-- Hero Section Begin -->
+     <section class="hero_section" id="home">
+        <div class="hero_slider">
+            <div class="hero_item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="hero-info">
+                                <div class="hero_text">
+                                    <h1>Yuk temukan jurusan favoritmu di bidang teknologi dan juga universitasnya disini</h1>
+                                    <p>Disini kami akan memberikan kamu rekomendasi jurusan di bidang 
+                                        teknologi yang sesuai dengan dirimu
+                                    </p>
+                                </div>
+                                <form action="">
+                                    <div class="search_box">
+                                        <a href="rekomendasi.html" target="_blank" class="btn btn-get-started">Get Started <i class="fa fa-arrow-right"></i></a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="hero_img ml-2">
+                              <img src={{ url_for('static', filename='/images/home.svg') }} width="348" height="380"></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Jurusan Section -->
+    <section class="jurusan_section" id="jurusan">
+        <div class="jurusan_item">
+            <div class="container">
+                <div class="jurusan_header">
+                    <h1><center>Jurusan Favorit di Bidang Teknologi</center></h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src={{ url_for('static', filename='/images/informatika.svg') }}>
+                            <div class="card-body">
+                              <h5 class="card-title">Teknik Informatika</h5>
+                              <p class="card-text">Teknik Informatika merupakan bidang ilmu yang mempelajari bagaimana menggunakan teknologi komputer...
+                            </p>
+                              <a href="https://campus.quipper.com/majors/id-teknik-informatika" class="btn btn-detail-jurusan">Selengkapnya<i class="fa fa-arrow-right"></i></a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src={{ url_for('static', filename='/images/si.svg')}}>
+                            <div class="card-body">
+                              <h5 class="card-title">Sistem Informasi</h5>
+                              <p class="card-text">Jurusan Sistem Informasi adalah bidang keilmuan yang menggabungkan ilmu komputer dengan bisnis dan...
+                            </p> 
+                              <a href="https://campus.quipper.com/majors/id-sistem-informasi" class="btn btn-detail-jurusan">Selengkapnya<i class="fa fa-arrow-right"></i></a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src={{ url_for('static', filename='/images/mi.svg') }} alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Manajemen Informatika</h5>
+                              <p class="card-text">Manajemen Informatika adalah ilmu yang mempelajari teori-teori dalam teknologi informasi serta...
+                            </p>
+                              <a href="https://campus.quipper.com/majors/id-manajemen-informatika" class="btn btn-detail-jurusan">Selengkapnya<i class="fa fa-arrow-right"></i></a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img class="card-img-top" src={{ url_for('static', filename='/images/teknologi.svg') }}>
+                            <div class="card-body">
+                              <h5 class="card-title">Teknologi Informasi</h5>
+                              <p class="card-text">Jurusan ini mendalami solusi-solusi terkait teknologi komputer yang diterapkan pada berbagai bidang,...
+                            </p>
+                              <a href="https://campus.quipper.com/majors/id-teknologi-informasi" class="btn btn-detail-jurusan">Selengkapnya<i class="fa fa-arrow-right"></i></a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img class="card-img-top" src={{ url_for('static', filename='/images/komputer.svg') }} alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Teknik Komputer</h5>
+                              <p class="card-text">Kuliah di Jurusan Teknik Komputer tentunya sangat cocok bagi kamu yang senang mengulik komputer. Apalagi,...
+                            </p>
+                              <a href="https://campus.quipper.com/majors/id-teknik-komputer" class="btn btn-detail-jurusan">Selengkapnya<i class="fa fa-arrow-right"></i></a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Jurusan Section End -->
+
+    <!-- Universitas Section -->
+    <section class="universitas_section" id="universitas">
+        <div class="universitas_item">
+            <div class="container">
+                <div class="universitas_header">
+                    <h1><center>Universitas-Universitas Terkait</center></h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-3" id="">
+                        <div class="card">
+                          <img class="card-img-top" src={{ url_for('static', filename='/images/itb.png') }} alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Institut Teknologi Bandung</h5>
+                            <a href="https://campus.quipper.com/directory/institut-teknologi-bandung" class="btn btn-detail-universitas">Selengkapnya<i class="fa fa-arrow-right"></i></a>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top" src={{ url_for('static', filename='/images/unpad.png') }} alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Universitas Padjajaran</h5>
+                              <a href="https://campus.quipper.com/directory/universitas-padjajaran" class="btn btn-detail-universitas">Selengkapnya<i class="fa fa-arrow-right"></i></a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="card">
+                          <img class="card-img-top" src={{ url_for('static', filename='/images/unhas.png') }} alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Universitas Hasanuddin</h5>
+                            <a href="https://campus.quipper.com/directory/universitas-hasanuddin" class="btn btn-detail-universitas">Selengkapnya<i class="fa fa-arrow-right"></i></a>
+                          </div>
+                      </div>
+                  </div>
+                    <div class="col-md-3">
+                      <div class="card">
+                          <img class="card-img-top" src={{ url_for('static', filename='/images/telkom.png') }} alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Universitas Telkom</h5>
+                            <a href="https://campus.quipper.com/directory/universitas-telkom" class="btn btn-detail-universitas">Selengkapnya<i class="fa fa-arrow-right"></i></a>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+                
+                <br>
+                <div class="row">
+                  <div class="col-md-3" id="">
+                      <div class="card">
+                        <img class="card-img-top" src={{ url_for('static', filename='/images/binus.png') }} alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">BINUS University</h5>
+                          <a href="https://campus.quipper.com/directory/binus-university" class="btn btn-detail-universitas">Selengkapnya<i class="fa fa-arrow-right"></i></a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="card">
+                          <img class="card-img-top" src={{ url_for('static', filename='/images/ub.png') }} alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Universitas Brawijaya</h5>
+                            <a href="https://campus.quipper.com/directory/universitas-brawijaya" class="btn btn-detail-universitas">Selengkapnya<i class="fa fa-arrow-right"></i></a>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src={{ url_for('static', filename='/images/ui.png') }} alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Universitas Indonesia</h5>
+                          <a href="https://campus.quipper.com/directory/universitas-indonesia" class="btn btn-detail-universitas">Selengkapnya<i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src={{ url_for('static', filename='/images/ugm.png') }} alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Universitas Gajah Mada</h5>
+                          <a href="https://campus.quipper.com/directory/universitas-gadjah-mada" class="btn btn-detail-universitas">Selengkapnya<i class="fa fa-arrow-right"></i></a>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    <!-- Universitas Section End -->
+
+    <!-- Profile Section -->
+    <section class="profile_section">
+      <div class="profile_item" id="profile">
+          <div class="container">
+              <div class="profile_header">
+                  <h1><center>Profile Team</center></h1>
+              </div>
+              <div class="row">
+                  <div class="col-md-3">
+                      <div class="card">
+                          <img class="card-img-top" src={{ url_for('static', filename='/images/artika.png') }} alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Artika Loriana</h5>
+                            <p class="card-text">STMIK Triguna Dharma</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src={{ url_for('static', filename='/images/eko.png') }} alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Eko Ikhwan Saputra</h5>
+                          <p class="card-text">STMIK AMIK Riau</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src={{ url_for('static', filename='/images/maryam.png') }} alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Siti Maryam</h5>
+                          <p class="card-text">Universitas Pendidikan Indonesia</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src={{ url_for('static', filename='/images/wulan.png') }} alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Wulan Fadhilah</h5>
+                          <p class="card-text">UPI “YPTK” Padang</p>
+                        </div>
+                    </div>
+                </div>
+            
+              </div>
+              
+          </div>
+      </div>
+  </section>
+  <!-- Universitas Section End -->
+
+
+   <!-- Footer Section -->
+   <section class="footer_section">
+    <div class="footer_item">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer_info">
+                        <div class="footer_logo">
+                            <h1><img src={{ url_for('static', filename='/images/logo.svg') }} alt=" " 
+                              width="70" height="70" align="left">  
+                        </div>
+                        <div class="footer_description">
+                            <p>Panduan dalam memilih jurusan yang sesuai untuk kamu</p>
+                        </div>
+                        <div class="footer_socmed">
+                            <ul class="socmed">
+                                <li class=""><a href=""><i class="fa fa-github"></i></a></li>
+                                <li class=""><a href=""><i class="fa fa-whatsapp"></i></a></li>
+                                <li class=""><a href=""><i class="fa fa-instagram"></i></a></li>
+                                <li class=""><a href=""><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer_menu">
+                        <div class="peta">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.335936244135!2d106.81182321431021!3d-6.219355762644872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1346d5321a7%3A0xe19b81e9e58ae407!2sOrbit%20Future%20Academy!5e0!3m2!1sid!2sid!4v1669057838128!5m2!1sid!2sid" 
+                            width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                          </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="footer_menu">
+                        <h3>Menu</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#jurusan">Jurusan</a></li>
+                            <li><a href="#universitas">Universitas</a></li>
+                            <li><a href="rekomendasi.html">Rekomendasi</a></li>
+                            <li><a href="#profile">Profile Team</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_dev">
+                <p>Copyright &copy; 2022 - SRJKOm ASIMO4</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer Section End -->
+
+    <script src="assets/custom/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
+</body>
+</html>
