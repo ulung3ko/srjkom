@@ -74,10 +74,10 @@ $(document).ready(function(){
     // Fungsi untuk menampilkan hasil prediksi model
     function generate_rekomendasi(res_data_rekomendasi) {
       var str="";
-      str += "<h3>Hasil Rekomendasi </h3>";
+      str += "<h5>Hasil Rekomendasi </h5>";
       str += "<br>";
-      str += "<h3>Berdasarkan rekomendasi, maka jurusan yang direkomendasikan yaitu : </h3>";
-      str += "<h3>" + res_data_rekomendasi + "</h3>";
+      str += "<h5>Berdasarkan rekomendasi, maka jurusan yang direkomendasikan yaitu : </h5>";
+      str += "<h1>" + res_data_rekomendasi + "</h1>";
       $("#hasil_rekomendasi").html(str);
     }  
     

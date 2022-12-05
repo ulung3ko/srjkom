@@ -176,7 +176,7 @@
                                     <option value=4 onInput="$(4).html($(this).val())">ML Engineer</option>
                                     <option value=5 onInput="$(5).html($(this).val())">DevOps Engineer</option>
                                     <option value=6 onInput="$(6).html($(this).val())">Attacker / Defense Cyber Security</option>
-                                    <option value=7 onInput="$(7).html($(this).val())">System Administrator / Network Administrator/option>
+                                    <option value=7 onInput="$(7).html($(this).val())">System Administrator / Network Administrator</option>
                                     <option value=8 onInput="$(8).html($(this).val())">Database Administrator</option>
                                     <option value=9 onInput="$(9).html($(this).val())">Software Engineer</option>
                                     <option value=10 onInput="$(10).html($(this).val())">IoT Engineer</option>
@@ -185,16 +185,18 @@
                                     <option value=13 onInput="$(12).html($(this).val())">Game Developer</option>
                                 </select>
                             </div>
-                              <a href="index.html" class="btn btn-kembali"><i class="fa fa-arrow-left"></i> Kembali</a>
+                            <div class="form-group float-right form_button">
+                              <a href={{ url_for ('beranda') }} class="btn btn-kembali"><i class="fa fa-arrow-left"></i> Kembali</a>
                               <button type="submit" class="btn btn-submit" id="proses_submit">Proses</button>
+                            </div>
                         </div>
-                    </div>
                 </form>
+                </div>
             </div>
         </div>
         <br>
         <!-- Bagian Halaman Untuk Hasil Rekomendasi -->
-        <div class="col-md-6">
+        <div  style=" font-size: 21px; font-weight: bold; color: #17223B;">
           <div id="hasil_rekomendasi" align="center">
           <!-- Hasil rekomendasi akan ditampilkan disini -->
         </div>
@@ -210,7 +212,8 @@
                 <div class="col-md-4">
                     <div class="footer_info">
                         <div class="footer_logo">
-                            <!-- <h1><img src="assets/images/logo.svg" alt=""> -->
+                                <h1><img src={{ url_for('static', filename='/images/logo.svg') }} alt=" " 
+                                 width="70" height="70" align="left">  
                         </div>
                         <div class="footer_description">
                             <p>Panduan dalam memilih jurusan yang sesuai untuk kamu</p>

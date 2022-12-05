@@ -448,12 +448,12 @@ a {
   font-size: 14px;
   color: #17223B;
   margin-right: 1.5em;
-  margin-top: 100em;
   margin-bottom: 5em;
+  margin-top: 10em;
 }
 .btn-submit {
-  margin-top: 100em;
   margin-bottom: 5em;
+  margin-top: 10em;
   background-color: #FF6768;
   border-radius: 5px;
   font-weight: 700;
