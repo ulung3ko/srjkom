@@ -23,9 +23,9 @@ const defaultOption = document.querySelector('.default_option');
 const  dropdownUl = document.querySelector('.dropdown ul');
 const dropdownUlLi = document.querySelectorAll('.dropdown ul li');
 
-defaultOption.addEventListener('click', function () {
-  dropdownUl.classList.toggle('active')
-})
+// defaultOption.addEventListener('click', function () {
+//   dropdownUl.classList.toggle('active')
+// })
 
 dropdownUlLi.forEach(dUlLi => {
   dUlLi.addEventListener('click', function () {

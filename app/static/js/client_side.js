@@ -54,7 +54,7 @@ $(document).ready(function(){
                        },
                 success:function(res){
                   // Ambil hasil prediksi jurusan dari API
-                  res_data_rekomendasi   = res['rekomendasi']
+                  res_data_rekomendasi   = res['jurusan_rekomendasi']
                   
                   
                   // Tampilkan hasil rekomendasi ke halaman web
@@ -72,12 +72,12 @@ $(document).ready(function(){
     })
       
     // Fungsi untuk menampilkan hasil prediksi model
-    function generate_rekomendasi(data_rekomendasi) {
+    function generate_rekomendasi(res_data_rekomendasi) {
       var str="";
       str += "<h3>Hasil Rekomendasi </h3>";
       str += "<br>";
       str += "<h3>Berdasarkan rekomendasi, maka jurusan yang direkomendasikan yaitu : </h3>";
-      str += "<h3>" + data_rekomendasi + "</h3>";
+      str += "<h3>" + res_data_rekomendasi + "</h3>";
       $("#hasil_rekomendasi").html(str);
     }  
     

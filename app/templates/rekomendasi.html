@@ -13,7 +13,7 @@
     crossorigin="anonymous">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href={{ url_for('static', filename='/css/style.css') }} type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -66,12 +66,12 @@
                 <p>Silahkan isi data di bawah ini sesuai dengan diri kamu</p>
             </div>
             <div class="form_nilai">
-                <form action="">
+              <form method="post">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="nilai_matematika">Nilai Matematika Terakhir : </label>
-                                <input type="number" class="form-control" id="nilai_matematika"
+                                <input type="number" name="nilai_matematika" class="form-control" id="nilai_matematika"
                                 onInput="$('#nilai_matematika').html($(this).val())">
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="jurusan_sekolah">Jurusan Saat Sekolah : </label>
+                                <label for="jurusan">Jurusan Saat Sekolah : </label>
                                 <br>
                                 <!-- <p><input type="radio" id="ipa" onInput="$('#rangeVal_ipa').html($(this).val())"> IPA</p> 
                                 <p><input type="radio" id="ips" onInput="$('#rangeVal_ips').html($(this).val())"> IPS</p> 
@@ -88,11 +88,11 @@
                                 <p><input type="radio" id="multimedia" onInput="$('#rangeVal_multimedia').html($(this).val())"> MULTIMEDIA</p> -->
                                 <select class="form-control" name="jurusan" id="jurusan">
                                     <option value="Pilih Jurusan">Pilih Jurusan</option>
-                                    <option value="1"  onInput="$('#jurusan').html($(this).val())">Mobile Developer</option>
-                                    <option value="2"  onInput="$('#jurusan').html($(this).val())">Data</option>
-                                    <option value="3"  onInput="$('#jurusan').html($(this).val())">Artificial Intelligence</option>
-                                    <option value="4"  onInput="$('#jurusan').html($(this).val())">Design Graphics</option>
-                                    <option value="5"  onInput="$('#jurusan').html($(this).val())">Cyber Security (Hack</option>
+                                    <option value=1 onInput="$(1).html($(this).val())">IPA</option>
+                                    <option value=2 onInput="$(2).html($(this).val())">IPS</option>
+                                    <option value=3 onInput="$(3).html($(this).val())">TKJ</option>
+                                    <option value=4 onInput="$(4).html($(this).val())">RPL</option>
+                                    <option value=5 onInput="$(5).html($(this).val())">Multimedia</option>
                                 </select>
                             </div>
                         </div>
@@ -103,20 +103,20 @@
                                 <label for="minat_1"> Minat 1 :</label>
                                 <br>
                                 <select class="form-control" name="minat_1" id="minat_1">
-                                    <option nama="minat" value="Pilih Minat 1">Pilih Minat 1</option>
-                                    <option nama="minat" value="1" id="mobile_developer" onInput="$('#rangeVal_mobile_developer').html($(this).val())">Mobile Developer</option>
-                                    <option nama="minat" value="2"  id="data" onInput="$('#rangeVal_data').html($(this).val())">Data</option>
-                                    <option nama="minat" value="3"  id="artificial_intelligence" onInput="$('#rangeVal_artificial_intelligence').html($(this).val())">Artificial Intelligence</option>
-                                    <option nama="minat" value="4"  id="design_graphics" onInput="$('#rangeVal_design_graphics').html($(this).val())">Design Graphics</option>
-                                    <option nama="minat" value="5"  id="cyber_security_hacking)" onInput="$('#rangeVal_cyber_security').html($(this).val())">Cyber Security (Hacking)</option>
-                                    <option nama="minat" value="6"  id="networking" onInput="$('#rangeVal_networking').html($(this).val())">Networking</option>
-                                    <option nama="minat" value="7"  id="operating_system" onInput="$('#rangeVal_operating_system').html($(this).val())">Operating System</option>
-                                    <option nama="minat" value="8"  id="database" onInput="$('#rangeVal_database').html($(this).val())">Database</option>
-                                    <option nama="minat" value="9"  id="web_development" onInput="$('#rangeVal_web_development').html($(this).val())">Web Development</option>
-                                    <option nama="minat" value="10"  id="smart_devices" onInput="$('#rangeVal_smart_devices').html($(this).val())">Smart Devices</option>
-                                    <option nama="minat" value="11"  id="cyber_security" onInput="$('#rangeVal_cyber_security').html($(this).val())">Cyber Security</option>
-                                    <option nama="minat" value="12"  id="creating_game" onInput="$('#rangeVal_creating_game').html($(this).val())">Creating Game</option>
-                                </select>
+                                    <option value="Pilih Minat 1">Pilih Minat 1</option>
+                                    <option value=1 onInput="$(1).html($(this).val())">Mobile Developer</option>
+                                    <option value=2 onInput="$(2).html($(this).val())">Data</option>
+                                    <option value=3 onInput="$(4).html($(this).val())">Artificial Intelligence</option>
+                                    <option value=4 onInput="$(5).html($(this).val())">Design Graphics</option>
+                                    <option value=5 onInput="$(6).html($(this).val())">Cyber Security (Hacking)</option>
+                                    <option value=6 onInput="$(7).html($(this).val())">Networking</option>
+                                    <option value=7 onInput="$(8).html($(this).val())">Operating System</option>
+                                    <option value=8 onInput="$(9).html($(this).val())">Database</option>
+                                    <option value=9 onInput="$(10).html($(this).val())">Web Development</option>
+                                    <option value=10 onInput="$(11).html($(this).val())">Smart Devices</option>
+                                    <option value=11 onInput="$(12).html($(this).val())">Cyber Security</option>
+                                    <option value=12 onInput="$(13).html($(this).val())">Creating Game</option>
+                                  </select>
                             </div>
                         </div>
                     </div>
@@ -125,23 +125,21 @@
                             <div class="form-group">
                                 <label for="minat_2"> Minat 2 :</label>
                                 <br>
-                                <select class="form-control">
-                                    <select class="form-control" name="minat_2" id="minat_1">
-                                        <option nama="minat" value="Pilih Minat 1">Pilih Minat 1</option>
-                                        <option nama="minat" value="1" id="mobile_developer" onInput="$('#rangeVal_mobile_developer').html($(this).val())">Mobile Developer</option>
-                                        <option nama="minat" value="2"  id="data" onInput="$('#rangeVal_data').html($(this).val())">Data</option>
-                                        <option nama="minat" value="3"  id="artificial_intelligence" onInput="$('#rangeVal_artificial_intelligence').html($(this).val())">Artificial Intelligence</option>
-                                        <option nama="minat" value="4"  id="design_graphics" onInput="$('#rangeVal_design_graphics').html($(this).val())">Design Graphics</option>
-                                        <option nama="minat" value="5"  id="cyber_security_hacking)" onInput="$('#rangeVal_cyber_security').html($(this).val())">Cyber Security (Hacking)</option>
-                                        <option nama="minat" value="6"  id="networking" onInput="$('#rangeVal_networking').html($(this).val())">Networking</option>
-                                        <option nama="minat" value="7"  id="operating_system" onInput="$('#rangeVal_operating_system').html($(this).val())">Operating System</option>
-                                        <option nama="minat" value="8"  id="database" onInput="$('#rangeVal_database').html($(this).val())">Database</option>
-                                        <option nama="minat" value="9"  id="web_development" onInput="$('#rangeVal_web_development').html($(this).val())">Web Development</option>
-                                        <option nama="minat" value="10"  id="smart_devices" onInput="$('#rangeVal_smart_devices').html($(this).val())">Smart Devices</option>
-                                        <option nama="minat" value="11"  id="cyber_security" onInput="$('#rangeVal_cyber_security').html($(this).val())">Cyber Security</option>
-                                        <option nama="minat" value="12"  id="creating_game" onInput="$('#rangeVal_creating_game').html($(this).val())">Creating Game</option>
-                                    </select>
-                                </select>
+                                  <select class="form-control" name="minat_2" id="minat_2">
+                                    <option value="Pilih Minat 2">Pilih Minat 2</option>
+                                    <option value=1 onInput="$(1).html($(this).val())">Mobile Developer</option>
+                                    <option value=2 onInput="$(2).html($(this).val())">Data</option>
+                                    <option value=3 onInput="$(3).html($(this).val())">Artificial Intelligence</option>
+                                    <option value=4 onInput="$(4).html($(this).val())">Design Graphics</option>
+                                    <option value=5 onInput="$(5).html($(this).val())">Cyber Security (Hacking)</option>
+                                    <option value=6 onInput="$(6).html($(this).val())">Networking</option>
+                                    <option value=7 onInput="$(7).html($(this).val())">Operating System</option>
+                                    <option value=8 onInput="$(8).html($(this).val())">Database</option>
+                                    <option value=9 onInput="$(9).html($(this).val())">Web Development</option>
+                                    <option value=10 onInput="$(10).html($(this).val())">Smart Devices</option>
+                                    <option value=11 onInput="$(11).html($(this).val())">Cyber Security</option>
+                                    <option value=12 onInput="$(12).html($(this).val())">Creating Game</option>
+                                  </select>
                             </div>
                         </div>
                     </div>
@@ -151,64 +149,59 @@
                                 <label for="prospek_karir1">Prospek Karir 1 yang diinginkan :</label>
                                 <br>
                                 <select class="form-control" name="prospek_karir1" id="prospek_karir1">
-                                    <option nama="prospek" value="Pilih Prospek Karir 1">Pilih Prospek Karir 1</option>
-                                    <option nama="prospek" value="1" id="mobile_apps_developer" onInput="$('#rangeVal_mobile_apps_developer').html($(this).val())">Mobile Apps Developer</option>
-                                    <option nama="prospek" value="2" id="ui_ux" onInput="$('#rangeVal_ui_ux').html($(this).val())">UI / UX</option>
-                                    <option nama="prospek" value="3" id="data_engineer" onInput="$('#rangeVal_data_engineer').html($(this).val())">Artificial Intelligence</option>
-                                    <option nama="prospek" value="4" id="ml_engineer" onInput="$('#rangeVal_ai_ml_engineer').html($(this).val())">ML Engineer</option>
-                                    <option nama="prospek" value="5" id="devops_engineer" onInput="$('#rangeVal_devops_engineer').html($(this).val())">DevOps Engineer</option>
-                                    <option nama="prospek" value="6" id="attacker" onInput="$('#rangeVal_attacker').html($(this).val())">Attacker / Defense Cyber Security</option>
-                                    <option nama="prospek" value="7" id="system_network_administrator" onInput="$('#rangeVal_system_network_administrator').html($(this).val())">System Administrator / Network Administrator/option>
-                                    <option nama="prospek" value="8" id="database_administrator" onInput="$('#rangeVal_database_administrator').html($(this).val())">Database Administrator</option>
-                                    <option nama="prospek" value="9" id="software_engineer" onInput="$('#rangeVal_software_engineer').html($(this).val())">Software Engineer</option>
-                                    <option nama="prospek" value="10" id="iot_engineer" onInput="$('#rangeVal_iot_engineer').html($(this).val())">IoT Engineer</option>
-                                    <option nama="prospek" value="11" id="auditor_TI" onInput="$('#rangeVal_auditor_TI').html($(this).val())">Auditor TI</option>
-                                    <option nama="prospek" value="12" id="web_developer" onInput="$('#rangeVal_web_developer').html($(this).val())">Web Developer</option>
-                                    <option nama="prospek" value="13" id="game_developer" onInput="$('#rangeVal_game_developer').html($(this).val())">Game Developer</option>
+                                    <option value="Pilih Prospek Karir 1">Pilih Prospek Karir 1</option>
+                                    <option value=1 onInput="$(1).html($(this).val())">Mobile Apps Developer</option>
+                                    <option value=2 onInput="$(2).html($(this).val())">UI / UX</option>
+                                    <option value=3 onInput="$(3).html($(this).val())">Data Scientist / Data Analyst / Data Engineer</option>
+                                    <option value=4 onInput="$(4).html($(this).val())">ML Engineer</option>
+                                    <option value=5 onInput="$(5).html($(this).val())">DevOps Engineer</option>
+                                    <option value=6 onInput="$(6).html($(this).val())">Attacker / Defense Cyber Security</option>
+                                    <option value=7 onInput="$(7).html($(this).val())">System Administrator / Network Administrator/option>
+                                    <option value=8 onInput="$(8).html($(this).val())">Database Administrator</option>
+                                    <option value=9 onInput="$(9).html($(this).val())">Software Engineer</option>
+                                    <option value=10 onInput="$(10).html($(this).val())">IoT Engineer</option>
+                                    <option value=11 onInput="$(11).html($(this).val())">Auditor TI</option>
+                                    <option value=12 onInput="$(12).html($(this).val())">Web Developer</option>
+                                    <option value=13 onInput="$(13).html($(this).val())">Game Developer</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="">Prospek Karir 2 yang diinginkan :</label>
                                 <br>
                                 <select class="form-control" name="prospek_karir2" id="prospek_karir2">
-                                    <option nama="prospek" value="Pilih Prospek Karir 1">Pilih Prospek Karir 1</option>
-                                    <option nama="prospek" value="1" id="mobile_apps_developer" onInput="$('#rangeVal_mobile_apps_developer').html($(this).val())">Mobile Apps Developer</option>
-                                    <option nama="prospek" value="2" id="ui_ux" onInput="$('#rangeVal_ui_ux').html($(this).val())">UI / UX</option>
-                                    <option nama="prospek" value="3" id="data_engineer" onInput="$('#rangeVal_data_engineer').html($(this).val())">Artificial Intelligence</option>
-                                    <option nama="prospek" value="4" id="ml_engineer" onInput="$('#rangeVal_ai_ml_engineer').html($(this).val())">ML Engineer</option>
-                                    <option nama="prospek" value="5" id="devops_engineer" onInput="$('#rangeVal_devops_engineer').html($(this).val())">DevOps Engineer</option>
-                                    <option nama="prospek" value="6" id="attacker" onInput="$('#rangeVal_attacker').html($(this).val())">Attacker / Defense Cyber Security</option>
-                                    <option nama="prospek" value="7" id="system_network_administrator" onInput="$('#rangeVal_system_network_administrator').html($(this).val())">System Administrator / Network Administrator/option>
-                                    <option nama="prospek" value="8" id="database_administrator" onInput="$('#rangeVal_database_administrator').html($(this).val())">Database Administrator</option>
-                                    <option nama="prospek" value="9" id="software_engineer" onInput="$('#rangeVal_software_engineer').html($(this).val())">Software Engineer</option>
-                                    <option nama="prospek" value="10" id="iot_engineer" onInput="$('#rangeVal_iot_engineer').html($(this).val())">IoT Engineer</option>
-                                    <option nama="prospek" value="11" id="auditor_TI" onInput="$('#rangeVal_auditor_TI').html($(this).val())">Auditor TI</option>
-                                    <option nama="prospek" value="12" id="web_developer" onInput="$('#rangeVal_web_developer').html($(this).val())">Web Developer</option>
-                                    <option nama="prospek" value="13" id="game_developer" onInput="$('#rangeVal_game_developer').html($(this).val())">Game Developer</option>
+                                    <option value="Pilih Prospek Karir 1">Pilih Prospek Karir 1</option>
+                                    <option value=1 onInput="$(1).html($(this).val())">Mobile Apps Developer</option>
+                                    <option value=2 onInput="$(2).html($(this).val())">UI / UX</option>
+                                    <option value=3 onInput="$(3).html($(this).val())">Data Scientist / Data Analyst / Data Engineer</option>
+                                    <option value=4 onInput="$(4).html($(this).val())">ML Engineer</option>
+                                    <option value=5 onInput="$(5).html($(this).val())">DevOps Engineer</option>
+                                    <option value=6 onInput="$(6).html($(this).val())">Attacker / Defense Cyber Security</option>
+                                    <option value=7 onInput="$(7).html($(this).val())">System Administrator / Network Administrator/option>
+                                    <option value=8 onInput="$(8).html($(this).val())">Database Administrator</option>
+                                    <option value=9 onInput="$(9).html($(this).val())">Software Engineer</option>
+                                    <option value=10 onInput="$(10).html($(this).val())">IoT Engineer</option>
+                                    <option value=11 onInput="$(11).html($(this).val())">Auditor TI</option>
+                                    <option value=12 onInput="$(12).html($(this).val())">Web Developer</option>
+                                    <option value=13 onInput="$(12).html($(this).val())">Game Developer</option>
                                 </select>
                             </div>
+                              <a href="index.html" class="btn btn-kembali"><i class="fa fa-arrow-left"></i> Kembali</a>
+                              <button type="submit" class="btn btn-submit" id="proses_submit">Proses</button>
                         </div>
-                    
-                    <div class="form-group float-right form_button">
-                        
-                        <a href="index.html" class="btn btn-kembali"><i class="fa fa-arrow-left"></i> Kembali</a>
-                        <button type="submit" class="btn btn-submit" id="proses_submit">Proses</button>
-                    </div>
                     </div>
                 </form>
             </div>
         </div>
         <br>
         <!-- Bagian Halaman Untuk Hasil Rekomendasi -->
-        <div id="hasil_rekomendasi" align="center">
-             <!-- Hasil rekomendasi akan ditampilkan disini -->
+        <div class="col-md-6">
+          <div id="hasil_rekomendasi" align="center">
+          <!-- Hasil rekomendasi akan ditampilkan disini -->
         </div>
+      </div>
     </div>
 </section>
 <!-- End Section Content -->
-
-
-
 <!-- Footer Section -->
    <section class="footer_section">
     <div class="footer_item">
@@ -217,7 +210,7 @@
                 <div class="col-md-4">
                     <div class="footer_info">
                         <div class="footer_logo">
-                            <h1><img src="assets/images/logo.svg" alt="">
+                            <!-- <h1><img src="assets/images/logo.svg" alt=""> -->
                         </div>
                         <div class="footer_description">
                             <p>Panduan dalam memilih jurusan yang sesuai untuk kamu</p>
@@ -261,11 +254,13 @@
 </section>
 <!-- Footer Section End -->
 
-    <script src="assets/custom/js/app.js"></script>
+    <!-- <script src="assets/custom/js/app.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <!-- JavaScript untuk Animasi Scroll dan Prediksi Model -->
 	<script  src={{ url_for('static', filename='/js/client_side.js') }}></script>
+    <script  src={{ url_for('static', filename='/js/app.js') }}></script>
+    <script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
 </body>
 </html>
 </body>
