@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse" id="openNavbar">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href={{ url_for ('beranda') }}>Home</a>
+                  <a class="nav-link" href={{ url_for ('beranda') }}>Beranda</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href={{ url_for ('beranda') }}>Jurusan</a>
@@ -71,8 +71,8 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="nilai_matematika">Nilai Matematika Terakhir : </label>
-                                <input type="number" name="nilai_matematika" class="form-control" id="nilai_matematika"
-                                onInput="$('#nilai_matematika').html($(this).val())">
+                                <input type="number" name="nilai_matematika" min="0" max="100" class="form-control" id="nilai_matematika"
+                                onInput="$('#nilai_matematika').html($(this).val())" required>
                             </div>
                         </div>
                     </div>
@@ -81,13 +81,7 @@
                             <div class="form-group">
                                 <label for="jurusan">Jurusan Saat Sekolah : </label>
                                 <br>
-                                <!-- <p><input type="radio" id="ipa" onInput="$('#rangeVal_ipa').html($(this).val())"> IPA</p> 
-                                <p><input type="radio" id="ips" onInput="$('#rangeVal_ips').html($(this).val())"> IPS</p> 
-                                <p><input type="radio" id="tkj" onInput="$('#rangeVal_tkj').html($(this).val())"> TKJ</p> 
-                                <p><input type="radio" id="rpl" onInput="$('#rangeVal_rpl').html($(this).val())"> RPL</p> 
-                                <p><input type="radio" id="multimedia" onInput="$('#rangeVal_multimedia').html($(this).val())"> MULTIMEDIA</p> -->
-                                <select class="form-control" name="jurusan" id="jurusan">
-                                    <option value="Pilih Jurusan">Pilih Jurusan</option>
+                                <select class="form-control" name="jurusan" id="jurusan" required>
                                     <option value=1 onInput="$(1).html($(this).val())">IPA</option>
                                     <option value=2 onInput="$(2).html($(this).val())">IPS</option>
                                     <option value=3 onInput="$(3).html($(this).val())">TKJ</option>
@@ -102,8 +96,7 @@
                             <div class="form-group">
                                 <label for="minat_1"> Minat 1 :</label>
                                 <br>
-                                <select class="form-control" name="minat_1" id="minat_1">
-                                    <option value="Pilih Minat 1">Pilih Minat 1</option>
+                                <select class="form-control" name="minat_1" id="minat_1" required>
                                     <option value=1 onInput="$(1).html($(this).val())">Mobile Developer</option>
                                     <option value=2 onInput="$(2).html($(this).val())">Data</option>
                                     <option value=3 onInput="$(4).html($(this).val())">Artificial Intelligence</option>
@@ -126,7 +119,7 @@
                                 <label for="minat_2"> Minat 2 :</label>
                                 <br>
                                   <select class="form-control" name="minat_2" id="minat_2">
-                                    <option value="Pilih Minat 2">Pilih Minat 2</option>
+                                    <option value=0 onInput="$(0).html($(this).val())">Kosong</option>
                                     <option value=1 onInput="$(1).html($(this).val())">Mobile Developer</option>
                                     <option value=2 onInput="$(2).html($(this).val())">Data</option>
                                     <option value=3 onInput="$(3).html($(this).val())">Artificial Intelligence</option>
@@ -148,8 +141,7 @@
                             <div class="form-group">
                                 <label for="prospek_karir1">Prospek Karir 1 yang diinginkan :</label>
                                 <br>
-                                <select class="form-control" name="prospek_karir1" id="prospek_karir1">
-                                    <option value="Pilih Prospek Karir 1">Pilih Prospek Karir 1</option>
+                                <select class="form-control" name="prospek_karir1" id="prospek_karir1" required>
                                     <option value=1 onInput="$(1).html($(this).val())">Mobile Apps Developer</option>
                                     <option value=2 onInput="$(2).html($(this).val())">UI / UX</option>
                                     <option value=3 onInput="$(3).html($(this).val())">Data Scientist / Data Analyst / Data Engineer</option>
@@ -169,7 +161,7 @@
                                 <label for="">Prospek Karir 2 yang diinginkan :</label>
                                 <br>
                                 <select class="form-control" name="prospek_karir2" id="prospek_karir2">
-                                    <option value="Pilih Prospek Karir 1">Pilih Prospek Karir 1</option>
+                                    <option value=0 onInput="$(0).html($(this).val())">Kosong</option>
                                     <option value=1 onInput="$(1).html($(this).val())">Mobile Apps Developer</option>
                                     <option value=2 onInput="$(2).html($(this).val())">UI / UX</option>
                                     <option value=3 onInput="$(3).html($(this).val())">Data Scientist / Data Analyst / Data Engineer</option>
@@ -188,18 +180,17 @@
                             <div class="form-group float-right form_button">
                               <a href={{ url_for ('beranda') }} class="btn btn-kembali"><i class="fa fa-arrow-left"></i> Kembali</a>
                               <button type="submit" class="btn btn-submit" id="proses_submit">Proses</button>
-                            </div>
+                            </div> <br> <br> <br> <br> <br> <br> <br>
+														<div id="hasil_rekomendasi" style=" font-size: 21px; font-weight: bold; color: #17223B;"></div>
                         </div>
-                </form>
+												<!-- <div > -->
+												<!-- </div> -->
+                	</form>
                 </div>
             </div>
         </div>
         <br>
         <!-- Bagian Halaman Untuk Hasil Rekomendasi -->
-        <div  style=" font-size: 21px; font-weight: bold; color: #17223B;">
-          <div id="hasil_rekomendasi" align="center">
-          <!-- Hasil rekomendasi akan ditampilkan disini -->
-        </div>
       </div>
     </div>
 </section>
@@ -240,7 +231,7 @@
                     <div class="footer_menu">
                         <h3>Menu</h3>
                         <ul>
-                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Beranda</a></li>
                             <li><a href="#">Universitas</a></li>
                             <li><a href="#">Jurusan</a></li>
                             <li><a href="#">Rekomendasi</a></li>
